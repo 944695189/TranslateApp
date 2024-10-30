@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/ZC"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="ZC"
+        android:text="注册"
+        app:layout_constraintStart_toEndOf="@+id/DL"
+        app:layout_constraintTop_toTopOf="@+id/DL" />
+
+    <Button
+        android:id="@+id/DL"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="120dp"
+        android:text="登录"
+        app:layout_constraintStart_toStartOf="@+id/TV2"
+        app:layout_constraintTop_toBottomOf="@+id/TV2" />
+
+    <EditText
+        android:id="@+id/USERNAME"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="请输入账号"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/TV1"
+        app:layout_constraintTop_toTopOf="@+id/TV1" />
+
+    <EditText
+        android:id="@+id/PASSWORD"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/TV2"
+        app:layout_constraintTop_toTopOf="@+id/TV2" />
+
+    <TextView
+        android:id="@+id/TV1"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="48dp"
+        android:text="账号"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TV2"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:text="密码"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="@+id/TV1"
+        app:layout_constraintTop_toBottomOf="@+id/TV1" />
+
+    <CheckBox
+        android:id="@+id/CONTRACT_CB"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@+id/TV2"
+        app:layout_constraintTop_toBottomOf="@+id/TV2" />
+
+    <Button
+        android:id="@+id/CONTRACT_BTN"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:background="#00000000"
+        android:onClick="CONTRACT"
+        android:text="勾选同意用户协议"
+        app:layout_constraintStart_toEndOf="@+id/CONTRACT_CB"
+        app:layout_constraintTop_toTopOf="@+id/CONTRACT_CB" />
+
+    <CheckBox
+        android:id="@+id/REMEMBER1_CB"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/TV2"
+        app:layout_constraintTop_toBottomOf="@+id/PASSWORD" />
+
+    <Button
+        android:id="@+id/REMEMBER1_BTN"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="#00000000"
+        android:onClick="REMEMBER1"
+        android:text="仅仅记住账号"
+        app:layout_constraintStart_toEndOf="@+id/REMEMBER1_CB"
+        app:layout_constraintTop_toTopOf="@+id/REMEMBER1_CB" />
+
+    <CheckBox
+        android:id="@+id/REMEMBER2_CB"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="@+id/REMEMBER1_CB"
+        app:layout_constraintTop_toBottomOf="@+id/REMEMBER1_CB" />
+
+    <Button
+        android:id="@+id/REMEMBER2_BTN"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="#00000000"
+        android:onClick="REMEMBER2"
+        android:text="记住账号及密码"
+        app:layout_constraintStart_toEndOf="@+id/REMEMBER2_CB"
+        app:layout_constraintTop_toTopOf="@+id/REMEMBER2_CB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".P1Activity">
+
+    <Button
+        android:id="@+id/P1"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:text="自由学习"
+        android:background="#00ff00"
+        android:onClick="P1"
+        app:layout_constraintBottom_toTopOf="@+id/P3"
+        app:layout_constraintEnd_toEndOf="@+id/P2" />
+
+    <Button
+        android:id="@+id/P2"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="闯关学习"
+        android:background="#FF00ff"
+        android:onClick="P2"
+        app:layout_constraintBottom_toTopOf="@+id/P1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/P3"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:text="单词本"
+        android:background="#FFff00"
+        android:onClick="P3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/P1" />
+
+    <EditText
+        android:id="@+id/NEWWORD"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/TV1"
+        app:layout_constraintTop_toTopOf="@+id/TV1" />
+
+    <TextView
+        android:id="@+id/TV1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="新单词"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/PICTURE"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="PICTURE"
+        android:text="拍照录入"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/COLLECT" />
+
+    <Button
+        android:id="@+id/SEARCH"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="查询"
+        android:textSize="18dp"
+        android:onClick="SEARCH"
+        app:layout_constraintStart_toEndOf="@+id/NEWWORD"
+        app:layout_constraintTop_toTopOf="@+id/NEWWORD" />
+
+    <TextView
+        android:id="@+id/TRANSLATE"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/TV1"
+        app:layout_constraintTop_toTopOf="@+id/NEWWORD" />
+
+    <Button
+        android:id="@+id/COLLECT"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="录入单词本"
+        android:textSize="18dp"
+        android:onClick="COLLECT"
+        app:layout_constraintStart_toStartOf="@+id/TRANSLATE"
+        app:layout_constraintTop_toBottomOf="@+id/TRANSLATE" />
+
+    <ProgressBar
+        android:id="@+id/pb_record"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/DKXC"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="打开相册"
+        android:textSize="25dp"
+        android:onClick="DKXC"
+        app:layout_constraintStart_toEndOf="@+id/PICTURE"
+        app:layout_constraintTop_toTopOf="@+id/PICTURE" />
+
+    <Button
+        android:id="@+id/UPLOAD"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:text="上传"
+        android:onClick="UPLOAD"
+        app:layout_constraintStart_toEndOf="@+id/DKXC"
+        app:layout_constraintTop_toTopOf="@+id/DKXC" />
+
+</android.support.constraint.ConstraintLayout>
